@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce project </title>
+    <!-- style file css -->
+     <link rel="stylesheet" href="style.css">
+    <!-- tailwined css cdn file -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontawsome cdn file link css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .box:hover .boxImg{
+        top: -40px;
+        transform: scale(1.5);
+        transition: .3s ease-in-out;
+    }
+    .active{
+        background-color: #023102 ;
+    }
+</style>
+<body class="bg-[#1C352D]">
+
+    <!-- nav section -->
+     <nav class="fixed top-0 bg-[#1C352D] w-[100%] z-111 shadow-lg  p-3">
+        <div class="sm:grid grid-cols-4 items-center text-white container mx-auto">
+
+                <div class="w-19 ">
+                    <img src="image/logo.png" class="w-[100%] rounded" alt="">
+                </div>
+                <div class="col-span-2">
+                    <ul class="md:flex justify-around">
+                        <li class="transition hover:text-green-500 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Home</a> </li>
+                        <li class="transition hover:text-green-500 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">New Books</a> </li>
+                        <li class="transition hover:text-green-500 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Catagory</a> </li>
+                        <li class="transition hover:text-green-500 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Review</a> </li>
+                        <li class="transition hover:text-green-500 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Contuct Us</a> </li>
+                    </ul>
+                </div>
+                <div class="flex justify-around">
+                    <button class="bg-green-500 hover:bg-green-800 px-4 py-2 rounded  transition duration-300 cursor-pointer"><a href="">Order Now</a> </button>
+                    <button class="text-2xl relative"> <span class="absolute -top-2 right-0 text-sm">0</span><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
+                </div>
+        </div>
+     </nav>
+
+     <!-- header section -->
+      <header class="relative z-2 mt-15 text-center flex justify-center  h-100" style="background-color: #49dd2c0a;">
+        <img src="image/header.png" class="opacity-3 absolute left-[25%] scale-150 top-2" alt="">
+            <div class="text-white mt-15">
+                <h1 class="text-5xl heding">Book Store</h1>
+                <h1>WooCommerce Theme</h1>
+            </div>
+            <img src="image/ldp_slide01.png" class="absolute z-2 -bottom-16 h-[100%]" alt="">
+            <img src="image/book.png" class=" scale-20 animate-bounce absolute right-0" alt="">
+            <div class="absolute h-60 w-60 bg-green-500 rounded-[50%] blur-3xl opacity- shadow-lg left-140 opacity-50 top-18"></div>
+
+      </header>
+
+      <!--  -->
+      <main class="w-[75%] mx-auto">
+
+        <section class="mt-25">
+            <div class="grid md:grid-cols-4 gap-x-10">
+                <div>
+                    <div class="box relative bg-[#49dd2c0a] shadow text-center p-3 h-30 rounded">
+                        <img src="image/main2.png" class="h-20 w-20 object-cover boxImg mx-auto rounded-lg absolute left-20 -top-5 " alt="">
+                        <p class="text-2xl text-white mt-15">Goal Point</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="box relative bg-[#49dd2c0a] shadow text-center p-3 h-30 rounded">
+                        <img src="image/main.png" class="h-20 w-20 object-cover boxImg mx-auto rounded-lg absolute left-20 -top-5 " alt="">
+                        <p class="text-2xl text-white mt-15">Focuse</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="box relative bg-[#49dd2c0a] shadow text-center p-3 h-30 rounded">
+                        <img src="image/main1.png" class="h-20 w-20 object-cover boxImg mx-auto rounded-lg absolute left-20 -top-5 " alt="">
+                        <p class="text-2xl text-white mt-15">Taslatetor</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="box relative bg-[#49dd2c0a] shadow text-center p-3 h-30 rounded">
+                        <img src="image/main3.jpg" class="h-20 w-20 object-cover boxImg mx-auto rounded-lg absolute left-20 -top-5 " alt="">
+                        <p class="text-2xl text-white mt-15">Online</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mt-35">
+            <div class="grid grid-cols-3 gap-x-10 relative">
+
+                <div class="absolute h-80 w-80 bg-green-400 rounded-[50%] blur-3xl   left-170 opacity-17 -top-10 -z-3"></div>
+
+                <div class="col-span-2 border-white rounded p-3 border ">
+                    <div class="grid grid-cols-2 gap-10 mb-4 border-b pb-4 border-white">
+
+                        <div class="flex border-r border-white flex-row gap-x-4">
+                            <a href="#"><img src="image/book4.jpg" class="h-40" alt=""></a>
+                            <div>
+                                <h3 class="text-green-400 text-xl">His Saving Grace...</h3>
+                                <div class="mt-2">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                                </div>
+                                <p class="text-white">Misty Figure</p>
+                                <p class="text-white mt-2">$201.00</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-x-4">
+                            <a href="#"><img src="image/book5.jpg" class="h-40" alt=""></a>
+                            <div>
+                                <h3 class="text-green-400 text-xl">His Saving Grace...</h3>
+                                <div class="mt-2">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                                </div>
+                                <p class="text-white">Misty Figure</p>
+                                <p class="text-white mt-2">$201.00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="grid grid-cols-2 gap-10">
+
+                        <div class="flex border-r border-white flex-row gap-x-4">
+                            <a href="#"><img src="image/book1.webp" class="h-40" alt=""></a>
+                            <div>
+                                <h3 class="text-green-400 text-xl">His Saving Grace...</h3>
+                                <div class="mt-2">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                                </div>
+                                <p class="text-white">Misty Figure</p>
+                                <p class="text-white mt-2">$201.00</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-x-4">
+                            <a href="#"><img src="image/book2.jpg" class="h-40" alt=""></a>
+                            <div>
+                                <h3 class="text-green-400 text-xl">His Saving Grace...</h3>
+                                <div class="mt-2">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                                </div>
+                                <p class="text-white">Misty Figure</p>
+                                <p class="text-white mt-2">$201.00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="overflow-y-auto">
+
+                    <div class="flex items-center gap-x-2 bg-white p-3">
+                            <img src="image/book1.webp" class="h-10" alt="">
+                            <div class="w-[100%]">
+                                <p>Book Name</p>
+                                <div class="grid grid-cols-2 justify-between">
+                                    <h1>$233</h1>
+                                    <h1 class=" text-center border px-4 rounded cursor-pointer">Bye</h1>
+                                </div>
+                            </div>
+                            
+                    </div>
+
+                    <div class="flex mt-1 items-center gap-x-2 bg-white p-3">
+                            <img src="image/book2.jpg" class="h-10" alt="">
+                            <div class="w-[100%]">
+                                <p>Book Name</p>
+                                <div class="grid grid-cols-2 justify-between">
+                                    <h1>$233</h1>
+                                    <h1 class=" text-center border px-4 rounded cursor-pointer">Bye</h1>
+                                </div>
+                            </div>                            
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-55">
+            <div class="grid grid-cols-2">
+                <div class="relative">
+                    <div class="w-100 h-100 blur-3xl opacity-10 bg-cyan-400 absolute -left-10 top-0" ></div>
+                    <div class="h-30 w-30 border-l-4 border-t-4 border-yellow-600 absolute left-12 -top-5"></div><div class="h-30 w-30 border-r-4 border-b-4 border-yellow-600 absolute right-12 -bottom-5"></div>
+                    <img src="image/couple-student-with-reading-book-hands_25030-39027.avif" class="h-90 mx-auto" alt="">
+                </div>
+                <div class="relative">
+                    <h3 class="text-3xl font-bold text-yellow-600 mb-3">Metali Helth of Art of Leacture..</h3>
+                    <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam rem delectus facere quaerat labore possimus voluptate enim quas? Quam rerum repellat voluptatibus dolor! Nulla.</p>
+
+                    
+                    <div class="w-100 h-100 blur-3xl opacity-10 bg-green-400 absolute right-0 top-0" ></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- book list -->
+         <section class="mb-3 mt-30">
+            <div class=" shadow-xl ">
+                <ul class="flex justify-around bookListNav bg- text-white p-3">
+                    <li class="border w-30 text-center rounded cursor-pointer bg-green-800 p-1 active" bokNav ="All">All</li>
+                    <li class="border w-30 text-center rounded cursor-pointer bg-green-800 p-1"bokNav ="Motivationla">Motivationla</li>
+                    <li class="border w-30 text-center rounded cursor-pointer bg-green-800 p-1" bokNav ="Funny">Funny</li>
+                    <li class="border w-30 text-center rounded cursor-pointer bg-green-800 p-1" bokNav ="Horn">Horn</li>
+                    <li class="border w-30 text-center rounded cursor-pointer bg-green-800 p-1" bokNav ="Love">Love</li>
+                    <li class="border w-30 text-center rounded cursor-pointer bg-green-800 p-1" bokNav ="Etc">Etc</li>
+                </ul>
+            </div>
+            <div class="boosList mt-25">
+
+                <p class="upcomming text-2xl text-center text-white hidden"> Upcomming........</p>
+                <div class="grid grid-cols-4 justify-between gap-10">
+
+                    <div bokAtt="Motivationla" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/book6.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="Funny" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/book1.webp" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="Love" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/book2.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="Love" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/book4.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="Horn" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/book6.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="Motivationla" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/images (1).jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="Horn" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/images (2).jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+                    <div  bokAtt="" class="bg-[#3a5a40] border-2 border-[transparent] rounded p-3 hover:border-white hover:border-2 bokCard">
+                        <div class="h-40 transition duration-300  relative">
+                            <img src="image/images (3).jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
+                        </div>
+                            <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
+                            </div>
+                            <p class="text-white border-t-1 mt-3">See more..</p>
+                    </div>
+
+
+                </div>
+            </div>
+         </section>
+
+         <!-- costomer review -->
+          <section class="mt-30 relative">
+
+            <div class="w-100 h-100 blur-3xl opacity-10 bg-green-300 absolute left-60 top-0" ></div>
+
+            <h2 class="text-white mb-8 text-2xl w-60 mx-auto border-b-2 pb-2 text-center ">Review our clint's</h2>
+
+            <div class="w-130 mx-auto">
+                <div class=" text-center text-white">
+                    <img src="image/customer.jpg" class="w-20 h-20 mx-auto object-cover  border-white border-2 p-1 rounded-[50%]" alt="">
+                    <h3 class="text-2xl mb-1">Alon Tarms</h3>
+                    <p class="relative"><img src="image/images-removebg-preview.png" class="w-8 absolute -left-10 top-0" alt="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ipsa sapiente doloribus consequuntur itaque dolorem maxime. Veniam dolores doloremque eaque!<img src="image/images-removebg-preview.png" class="w-8 absolute -right-10 top-0 rotate-180" alt=""></p>
+                </div>
+            </div>
+          </section>
+
+          <!-- SPECIAL BOOKS -->
+           <section class="mt-25">
+                <div> 
+                    <div class="sm:flex relative flex-row-reverse justify-around items-center bg-teal-900 p-4 h-auto">
+                        <div class="h-50 basis-1/2">
+                            <img src="image/special.jpg" class="h-[100%] mx-auto" alt="">
+                        </div>
+                        <div class="basis-1/2">
+                            <h1 class="text-3xl text-white font-bold mb-1">Suicide: A Study in Sociology</h1>
+                            <p class="text-white">Émile Durkheim John A. Spaulding, George Simpson</p>
+                             <div class="mt-2 ">
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>
+                                    <span class="text-white">5</span>
+                            </div>
+                            <p class="w-[100%] text-white mt-2">A classic book about the phenomenon of suicide and its social causes written by one of the world’s most influential sociologists. <a href="" class=""><br>  see more...</a></p>
+                        </div>
+                        <img src="image/toprate-removebg-preview.png" class="absolute w-35 right-0 -top-9" alt="">
+                    </div>
+                </div>
+           </section>
+
+           <!-- contuct form -->
+            <section class="my-10">
+                <div class="grid sm:grid-cols-2 gap-x-10">
+                    <div class="gallerySection grid grid-cols-4  gap-3 border border-white p-4 rounded h-100"  >
+                        <div class="border-white rounded border-2 col-span-2 row-span-1 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/book.png" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 row-span-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/book1.webp" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/book5.jpg" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 col-span-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/book7.png" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 row-span-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/book3.jpg" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/book6.jpg" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/—Pngtree—graduation cap books and diploma_20731920.png" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                        <div class="border-white rounded border-2 relative overflow-hidden">
+                            <div class="absolute w-full h-full bg-teal-900 blur-2xl -z-3"></div>
+                            <img src="image/26353.jpg" alt="" class="object-cover mx-auto h-full">
+                        </div>
+                    </div>
+                    <div class="contuctForm overflow-hidden h-full  rounded relative rounded">
+                        <div class="absolute w-full h-full bg-teal-900  blur-2xl -z-3"></div>
+                        <form class="mb-12  rounded   basis-auto md:px-3 lg:mb-0  lg:px-6">
+
+                            <div class="my-3 w-full">
+                                <label class="block font-medium mb-[2px] text-white " htmlFor="exampleInput90">
+                                        Name
+                                </label>
+                                <input type="text" class="px-2 py-2 border border-white text-white  mt-2 w-full outline-none rounded-md" id="exampleInput90" placeholder="Name" />
+                            </div>
+
+                            <div class="mb-3 w-full">
+                                <label class="block font-medium mb-[2px] text-white" htmlFor="exampleInput90">
+                                        Email
+                                </label>
+                                <input type="email" class="px-2 py-2 border border-white text-white w-full outline-none rounded-md" id="exampleInput90"
+                                        placeholder="Enter your email address" />
+                            </div>
+
+                            <div class="mb-3 w-full">
+                                <label class="block font-medium mb-[2px] text-white" htmlFor="exampleInput90">
+                                        Message
+                                </label>
+                                <textarea class="px-2 py-2 border rounded-[5px] border-white text-white w-full outline-none" name="" id=""></textarea>
+                            </div>
+
+                            <button type="button"
+                                    class="mb-6 inline-block w-full rounded bg-teal-400 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-teal-500 cursor-pointer">
+                                    Send
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+
+      </main>
+    
+
+      <!-- footer section  -->
+       <footer class="bg-[#1A1D2B]">
+    <div class="container mx-auto p-0  xl:px-0">
+        <div class="mx-auto max-w-7xl px-6 pb-10 pt-10">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8 ">
+                <div class="space-y-4">
+                    <div>
+                        <a href="#">
+                            <div class="flex items-center space-x-2 text-2xl font-medium">
+                                <span>
+                                    <img src="image/logo.png" alt="Logo"
+                                        class="w-16 h-16 rounded-[50%]">
+                                </span>
+                                <span class="text-white">Company Name</span>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="max-w-md pr-16 text-md text-gray-200">Enhance productivity and
+                        efficiency with cutting-edge artificial intelligence solutions for your business operations.
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Linkedin</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Our Solutions</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">AI Platform
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">AI Algorithms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Industry
+                                        Applications
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Use Cases</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Predictive
+                                        Analysis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Customer
+                                        Experience
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Automation
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Resources</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Pricing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-md leading-6 text-gray-300 hover:text-gray-50">Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Case Studies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-md leading-6 text-gray-300 hover:text-gray-50">Terms
+                                        of Service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Company</h3>
+                            <ul  class="mt-6 space-y-4">
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Careers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-400/30 pt-4 sm:mt-2">
+                <div class="text-md text-center text-white">
+                    Copyright © 2024 . Crafted with
+                    <span class="text-gray-50">♥</span> by AI enthusiasts at
+                    <a rel="" href="#">Allion Coders.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </footer>
+
+
+
+        <script>
+            let bookListNav = document.querySelectorAll('.bookListNav li');
+            let booklists = document.querySelectorAll('.bokCard');
+            let upcomming = document.querySelector('.upcomming');
+            bookListNav.forEach(sigBookBtn => {
+                sigBookBtn.addEventListener('click', () => {
+                    document.querySelector('.active').classList.remove('active');
+                    sigBookBtn.classList.add('active');
+
+                    let clickBokNavBtn = sigBookBtn.getAttribute('bokNav');
+
+                    for(let i = 0; i <= booklists.length; i++){
+
+                        let card = booklists[i].getAttribute('bokAtt')
+
+                        if(clickBokNavBtn == card){
+                            booklists[i].classList.remove('hidden')
+                            
+
+                        }else if(clickBokNavBtn == "All"){
+                            booklists[i].classList.remove('hidden')
+                            upcomming.classList.add('hidden')
+
+                        }
+                        else if(clickBokNavBtn == "Etc"){
+                            booklists[i].classList.add('hidden')
+                            upcomming.classList.remove('hidden')
+                        }
+                        else{
+                            booklists[i].classList.add('hidden')
+                           upcomming.classList.add('hidden')
+                        }
+                    }
+                })
+            })
+</script>
+</body>
+</html>
