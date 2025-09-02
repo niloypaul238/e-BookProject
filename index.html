@@ -20,8 +20,40 @@
     .active{
         background-color: #023102 ;
     }
+    .productCard::-webkit-scrollbar{
+        display: none;
+    }
 </style>
-<body class="bg-[#1C352D]">
+<body class="bg-[#1C352D] relative w-[100%]">
+    <div class="mainProCard  absolute w-[100%] h-[100vh] bg-[#1b1d1bda] right-[] top-0  fixed z-700 ">
+        <div class="productCard overflow-auto  absolute duration-300  flex gap-y-9 flex-col w-80 h-[100vh] bg-white right-0 p-2  fixed z-999 top-0">
+            <div class="cursor-pointer text-2xl relative ">
+                <i class="fa-solid fa-xmark hover:rotate-45 duration-300 ease-in absolute right-0"></i>
+            </div>
+            <div>
+                <h2 class="bg-green-800 text-white p-2">Shoping Card </h2>
+                <div class="prepend ">
+                    
+                </div>
+            </div>
+            <div class="ccalculate border-t border-gray-400 ">
+                <div class="p-4">
+                    <h1>Total  <span class="float-end ">$<span class="totalShow">00</span></span></h1>
+                    <h1>Discount  <span class="float-end ">$<span></span class="discountBlance">00</span></h1>
+
+                    <h1>Final Blance  <span class="float-end ">$<span class="final">00</span></span></h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
     <!-- nav section -->
      <nav class="fixed top-0 bg-[#1C352D] w-[100%] z-111 shadow-lg  p-3">
@@ -41,7 +73,7 @@
                 </div>
                 <div class="flex justify-around">
                     <button class="bg-green-500 hover:bg-green-800 px-4 py-2 rounded  transition duration-300 cursor-pointer"><a href="">Order Now</a> </button>
-                    <button class="text-2xl relative"> <span class="absolute -top-2 right-0 text-sm">0</span><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
+                    <button class="text-2xl relative xMarkOpen"> <span class="absolute -top-2 right-0 text-sm cardNumberCount">0</span><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></button>
                 </div>
         </div>
      </nav>
@@ -180,8 +212,8 @@
                             <div class="w-[100%]">
                                 <p>Book Name</p>
                                 <div class="grid grid-cols-2 justify-between">
-                                    <h1>$233</h1>
-                                    <h1 class=" text-center border px-4 rounded cursor-pointer">Bye</h1>
+                                    <h1>$$ <span>23</span></h1>
+                                    <h1 class=" text-center border px-4 rounded cursor-pointer byeBtn">Bye</h1>
                                 </div>
                             </div>
                             
@@ -192,8 +224,8 @@
                             <div class="w-[100%]">
                                 <p>Book Name</p>
                                 <div class="grid grid-cols-2 justify-between">
-                                    <h1>$233</h1>
-                                    <h1 class=" text-center border px-4 rounded cursor-pointer">Bye</h1>
+                                    <h1>$ <span>233</span></h1>
+                                    <h1 class=" text-center border px-4 rounded cursor-pointer byeBtn">Bye</h1>
                                 </div>
                             </div>                            
                     </div>
@@ -241,6 +273,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/book6.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 1 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -259,6 +292,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/book1.webp" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 2 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -277,6 +311,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/book2.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 3 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -295,6 +330,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/book4.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 4 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -313,6 +349,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/book6.jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 5 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -322,7 +359,7 @@
                                     <span class="text-white">5</span>
                             </div>
                             <div class="flex justify-between mt-3">
-                                <p class="text-white">$<span class="text-xl">13</span></p>
+                                <p class="text-white">$<span class="text-xl">13</span><span class="hidden">13</span></p>
                                 <button class="bg-[#022c02d7] text-white px-2 rounded cursor-pointer">Add to Cart</button>
                             </div>
                             <p class="text-white border-t-1 mt-3">See more..</p>
@@ -331,6 +368,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/images (1).jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 1 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -349,6 +387,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/images (2).jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 1 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -367,6 +406,7 @@
                         <div class="h-40 transition duration-300  relative">
                             <img src="image/images (3).jpg" class="h-40  bookCardImg  -top-0 hover:shadow left-2 rounded mx-auto" alt="">
                         </div>
+                        <p class="text-center text-white my-1">Poem 1 book</p>
                             <div class="mt-2 ">
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
                                     <i class="fa-solid fa-star text-sm" style="color: #FFD43B;"></i>
@@ -396,9 +436,9 @@
 
             <div class="w-130 mx-auto">
                 <div class=" text-center text-white">
-                    <img src="image/customer.jpg" class="w-20 h-20 mx-auto object-cover  border-white border-2 p-1 rounded-[50%]" alt="">
-                    <h3 class="text-2xl mb-1">Alon Tarms</h3>
-                    <p class="relative"><img src="image/images-removebg-preview.png" class="w-8 absolute -left-10 top-0" alt="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ipsa sapiente doloribus consequuntur itaque dolorem maxime. Veniam dolores doloremque eaque!<img src="image/images-removebg-preview.png" class="w-8 absolute -right-10 top-0 rotate-180" alt=""></p>
+                    <img src="image/customer.jpg" class="w-20 h-20 mx-auto object-cover  border-white border-2 p-1 rounded-[50%] costmerImg" alt="">
+                    <h3 class="text-2xl mb-1 customerName">Alon Tarms</h3>
+                    <p class="relative"><img src="image/images-removebg-preview.png" class="w-8 absolute -left-10 top-0" alt=""><span class="customerComment">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ipsa sapiente doloribus consequuntur itaque dolorem maxime. Veniam dolores doloremque eaque!</span> <img src="image/images-removebg-preview.png" class="w-8 absolute -right-10 top-0 rotate-180" alt=""></p>
                 </div>
             </div>
           </section>
@@ -659,9 +699,100 @@
 
 
         <script>
+            let final = document.querySelector('.final');
+            let discountBlance = document.querySelector('.discountBlance')
+            let cardNumberCount = document.querySelector('.cardNumberCount')
+            let prepend = document.querySelector('.prepend')
+            let xMarkOpen  = document.querySelector('.xMarkOpen');
             let bookListNav = document.querySelectorAll('.bookListNav li');
             let booklists = document.querySelectorAll('.bokCard');
             let upcomming = document.querySelector('.upcomming');
+            let xMark = document.querySelector('.fa-xmark');
+            let mainProCard = document.querySelector('.mainProCard');
+            let productCard = document.querySelector('.productCard')
+
+            let byeBtns = document.querySelectorAll('.byeBtn');
+            let totalShow = document.querySelector('.totalShow')
+
+            // customer sectin variable
+            let costmerImg = document.querySelector('.costmerImg')
+            let customerName = document.querySelector('.customerName');
+            let comment = document.querySelector('.customerComment');
+            let loopNum = 0;
+
+
+
+
+
+
+            let byBtnFun = (e)=> {
+                let byBtnTarget = e.target.parentElement.parentElement.parentElement;
+                let byBtnImg = byBtnTarget.children[0].src;
+                let byBtnName = byBtnTarget.children[1].children[0].innerHTML;
+                let byBtnPrize = byBtnTarget.children[1].children[1].children[0].children[0].innerHTML;
+                //console.log(byBtnTarget.children[1].children[1].children[0].children[0].innerHTML);
+
+                let divcreate = document.createElement('div');
+                divcreate.classList.add('flex' ,'justify-between', 'items-center', 'mt-2', 'bg-gray-200', 'p-2')
+                divcreate.innerHTML =`
+                        <div class="flex flex-col">
+                        <img src="${byBtnImg}" class="w-12 " alt="">
+                        <h1>${byBtnName}</h1>
+                        </div>     
+                        <div class="flex  items-center  justify-between ">
+                            <button class="border-t border-b border-l px-2 border-gray-400 rounded-l cursor-pointer mainusBtn">-</button><span class="border px-2 border-gray-400">1</span><button class="border-t border-b border-r px-2 border-gray-400 rounded-r cursor-pointer mainusBtn">+</button>
+                        </div>
+                        <p><span class="prize" >${Number(byBtnPrize)}</span> <span class="hiddenBlance" hidden >${Number(byBtnPrize)}</span></p>
+                        <i class="fa-solid fa-trash text-red-700 cursor-pointer"></i>
+
+                
+                `;
+               prepend.prepend(divcreate);
+               let len = prepend.children.length
+               cardNumberCount.innerHTML = len;
+
+                //    calculate assing function
+                totalFun()
+
+
+               //    maninus btn section 
+                let mainusBtns = prepend.querySelectorAll('.mainusBtn')
+                    mainusBtns.forEach( mainusBtn => {
+                        mainusBtn.addEventListener('click' , mainusFun)
+                })
+               
+            //delete icon 
+            prepend.querySelectorAll('.fa-trash').forEach(deleteBtn => {
+                deleteBtn.addEventListener('click' , dltFun)
+            })
+             
+                
+
+
+            }
+
+
+
+
+            // byeBtn ..............
+            byeBtns.forEach(byBtn => {
+                byBtn.addEventListener('click' , byBtnFun)
+            })
+
+
+            // xmark ........................
+            xMark.addEventListener('click' , ()=> {
+                mainProCard.style.right = '-1500px';
+                productCard.style.right = '-600px'
+            })
+            xMarkOpen.addEventListener('click' , () => {
+                mainProCard.style.right = '0px';
+                productCard.style.right = '0px'
+            })
+
+
+
+
             bookListNav.forEach(sigBookBtn => {
                 sigBookBtn.addEventListener('click', () => {
                     document.querySelector('.active').classList.remove('active');
@@ -693,6 +824,183 @@
                     }
                 })
             })
+
+            // add to card............
+            let cardFun = (e) => {
+                let tar = e.target.parentElement.parentElement;
+
+                let imgProduct = tar.children[0].children[0].src;
+                let productNamme = tar.children[1].innerHTML;
+                let proPrize = tar.children[3].children[0].children[0].innerHTML;
+               
+                let divcreate = document.createElement('div');
+                divcreate.classList.add('flex' ,'justify-between', 'items-center', 'mt-2', 'bg-gray-200', 'p-2')
+                divcreate.innerHTML =`
+                        <div class="flex flex-col">
+                        <img src="${imgProduct}" class="w-12 " alt="">
+                        <h1>${productNamme}</h1>
+                        </div>     
+                        <div class="flex  items-center  justify-between ">
+                            <button class="border-t border-b border-l px-2 border-gray-400 rounded-l cursor-pointer mainusBtn">-</button><span class="border px-2 border-gray-400">1</span><button class="border-t border-b border-r px-2 border-gray-400 rounded-r cursor-pointer mainusBtn">+</button>
+                        </div>
+                        <p><span class="prize" >${Number(proPrize)}</span> <span class="hiddenBlance" hidden >${Number(proPrize)}</span></p>
+                        <i class="fa-solid fa-trash text-red-700 cursor-pointer"></i>
+
+                
+                `;
+               prepend.prepend(divcreate)
+               let len = prepend.children.length
+               cardNumberCount.innerHTML = len;
+
+            //    calculate assing function
+                totalFun()
+
+            //    maninus btn section 
+            let mainusBtns = prepend.querySelectorAll('.mainusBtn')
+                mainusBtns.forEach( mainusBtn => {
+                mainusBtn.addEventListener('click' , mainusFun)
+            })
+
+             //delete icon 
+            prepend.querySelectorAll('.fa-trash').forEach(deleteBtn => {
+                deleteBtn.addEventListener('click' , dltFun)
+            })
+
+
+          
+                 
+            
+               
+            }
+
+
+
+// calculate function
+let totalFun = () => {
+    let prependSingPrize = prepend.querySelectorAll('.prize')
+   
+    let sum = 0;
+    for(let calculateNum of prependSingPrize){
+        let calculNum = Number(calculateNum.innerHTML)
+        sum+= calculNum
+    };
+    totalShow.innerHTML = sum
+    
+
+    finalFun(sum)
+}
+
+// final blance 
+let finalFun = (su) => {
+    final.innerHTML = su;
+}
+
+
+
+            booklists.forEach(singleCard => {
+                singleCard.addEventListener('click' , cardFun)
+            })
+
+
+            //incri and dicri 
+            let mainusFun = (e) => {
+                let hiddenPri = Number( e.target.parentElement.parentElement.children[2].children[1].innerHTML)
+
+                if(e.target.innerHTML == "-"){
+                    let mainusValu =Number(e.target.parentElement.children[1].innerHTML);
+                    mainusValu--
+                    if( mainusValu > 0){
+                        
+                    e.target.parentElement.children[1].innerHTML = mainusValu;
+
+                    e.target.parentElement.parentElement.children[2].children[0].innerHTML = hiddenPri * mainusValu;
+
+                    // totoal function
+                    totalFun()
+                    
+                    }else{
+                        e.target.classList.add('cursor-not-allowed')
+                        e.target.classList.remove('cursor-pointer')
+                    }
+                    
+                }else{
+                    // console.log(e.target.parentElement.parentElement.children[2].children[1].innerHTML);
+                    let mainusValu =Number(e.target.parentElement.children[1].innerHTML);
+                    mainusValu++
+                    e.target.parentElement.children[1].innerHTML = mainusValu;
+                    e.target.parentElement.children[0].classList.remove('cursor-not-allowed')
+                    e.target.parentElement.children[0].classList.add('cursor-pointer')
+                    e.target.parentElement.parentElement.children[2].children[0].innerHTML = hiddenPri * mainusValu;
+
+                    // total function
+                    totalFun()
+                }
+                
+            }
+
+
+            // delete function create 
+            let dltFun = (e) => {
+                e.target.parentElement.remove()
+                
+                // icon length 
+                let len = prepend.children.length
+                cardNumberCount.innerHTML = len;
+                // total fun call
+                totalFun()
+           
+            }
+
+
+
+            // customer review sectiion
+            let customers = [
+            
+            {
+                name : "Alon Tarms",
+                img : "image/customer1.jpg",
+                comment : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus ipsa sapiente doloribus consequuntur itaque dolorem maxime. Veniam dolores doloremque eaque!"
+            },
+            {
+                name : "Niloy Paul",
+                img : "image/customer2.jpg",
+                comment : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+            },
+            {
+                name : "Json Mit",
+                img : "image/customer3.jpg",
+                comment : " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."
+            },
+
+            ];
+
+            for(let cus of customers){
+                console.log(cus)
+            }
+
+
+            let customerFun = () => {
+                loopNum++
+
+                if(customers.length > loopNum){
+                    
+                costmerImg.src = customers[loopNum].img;
+                customerName.innerHTML = customers[loopNum].name;
+                comment.innerHTML = customers[loopNum].comment;
+
+                }else{
+
+                loopNum = 0;
+                    
+                costmerImg.src = customers[loopNum].img;
+                customerName.innerHTML = customers[loopNum].name;
+                comment.innerHTML = customers[loopNum].comment;
+                }
+                
+            }
+            setInterval(customerFun,1500)
+            
+          
 </script>
 </body>
 </html>
